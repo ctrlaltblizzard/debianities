@@ -1,0 +1,11 @@
+* {
+    font-family: "Spleen 6x12";
+    font-size: 12px;
+}
+
+.modules-center {
+    border: 3px solid rgb(256,256,256);
+	background-color: #FFFFFF;
+	padding: 0px 0px 0px 0px;
+	color: #000000;
+}
