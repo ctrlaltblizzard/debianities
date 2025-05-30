@@ -4,3 +4,6 @@ Minimalistic Approach with Light Theme and Bitmap Fonts
 Missing:
 Login Manager - ly
 Fonts
+
+- directory "catppuccin" has better config structure
+- will try to fix this if i can
