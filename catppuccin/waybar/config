@@ -1,0 +1,101 @@
+{
+  "layer": "top", // Waybar at top layer
+  "position": "top", // Waybar position (top|bottom|left|right)
+  "height": 20,
+  "margin": "0 0 0 0",
+
+// Add Module Contents
+
+  "modules-left": [
+    "clock",
+    "sway/workspaces",
+    "tray",
+    "sway/mode",
+  ],
+
+  "modules-center": [
+    "sway/window",
+  ],
+
+  "modules-right": [
+    "battery",
+    "backlight",
+    "pulseaudio",
+    "network",
+  ],
+
+  // Modules configuration
+
+  "sway/workspaces": {
+	"format": "{icon}",
+	"format-icons": {
+      "1": "  ",	// Terminal
+      "2": "  ",	// Browser
+      "3": "  ",	// File Manager
+      "4": " 󱞎 ",	// Text Editor
+      "5": "  ",	// Screen Record
+      "6": "  ",	// Undefined
+      "7": "  ",	// VIM
+      "8": "  ",	// Undefined
+      "9": "  ",	// Undefined
+      "10": "  "	// GTK
+  },
+},
+
+"battery": {
+        "format": "{icon} {capacity}%",
+        "format-charging": "󰂅 {capacity}%",
+        "format-plugged": " {capacity}%",
+        "format-icons": ["󰁺", "󰁼", "󰂁", "󰂂", "󰁹"]
+    },
+
+    "sway/mode": {
+    "format": "<span style=\"italic\">{}</span>"
+  },
+
+  "sway/window": {
+    "format": "{}",
+    "rewrite": {
+        "": "If it works, don't touch it.",
+    },
+  },
+
+  "tray": {
+    "icon-size": 18,
+    "spacing": 5
+  },
+
+  "clock": {
+    "tooltip-format": "{}",
+    "format": "{:  %I:%M %p}", //12 hour format
+    "interval": 1
+  },
+
+  "backlight": {
+    "format": "{icon} {percent: >1}%",
+    "format-icons": ["", ""],
+    "on-scroll-down": "light -A 5",
+    "on-scroll-up": "light -U 5"
+  },
+
+  "network": {
+    "format": "⚠ ",
+    "format-wifi": " ",
+    "format-ethernet": " ",
+    "format-disconnected": "⚠",
+  },
+
+  "pulseaudio": {
+    "scroll-step": 1,
+    "format": "{icon} {volume: >1}%",
+    "format-muted": " muted",
+    "format-icons": {
+        "default": [" ", " "]
+    },
+
+    "on-click": "pavucontrol",
+    "on-scroll-up": "pamixer -ui 2",
+    "on-scroll-down": "pamixer -ud 2"
+  }, 
+
+}
